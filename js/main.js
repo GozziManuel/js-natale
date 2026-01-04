@@ -4,8 +4,7 @@ let somma = 0;
 let conteggio = 0;
 let numeroDaCercareLeggero = 1;
 const sceltaPesi = prompt(
-  "Scegli il peso dei regali tra: leggero, medio o pesante.",
-  "leggero"
+  "Scegli il peso dei regali tra: leggero, medio o pesante."
 );
 console.log(sceltaPesi);
 
@@ -25,6 +24,7 @@ if (sceltaPesi === "leggero") {
   alert(`i regali leggeri pesano ${somma} in totale e sono ${conteggio} `);
   console.log(somma);
 }
+
 if (sceltaPesi === "medio") {
   for (let i = 0; i < pesiBonus.length; i++) {
     if (pesiBonus[i] > 1 && pesiBonus[i] < 12) somma += pesiBonus[i];
@@ -56,4 +56,10 @@ if (sceltaPesi === "pesante") {
   console.log(conteggio);
   alert(`i regali leggeri pesano ${somma} in totale e sono ${conteggio} `);
   console.log(somma);
+} else if (
+  sceltaPesi !== "leggero" &&
+  sceltaPesi !== "medio" &&
+  sceltaPesi !== "pesante"
+) {
+  alert("metti un input valido tra leggero, medio e pesante.");
 }

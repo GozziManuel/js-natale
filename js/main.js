@@ -3,7 +3,6 @@ console.table(pesiBonus);
 let somma = 0;
 let conteggio = 0;
 let numeroDaCercareLeggero = 1;
-let numeroDaCercarePesante = 12;
 const sceltaPesi = prompt(
   "Scegli il peso dei regali tra: leggero, medio o pesante.",
   "leggero"
@@ -16,20 +15,45 @@ if (sceltaPesi === "leggero") {
       somma += pesiBonus[i];
     }
   }
-}
-for (let i = 0; i < pesiBonus.length; i++) {
-  if (numeroDaCercareLeggero === pesiBonus[i]) conteggio++;
+
+  for (let i = 0; i < pesiBonus.length; i++) {
+    if (numeroDaCercareLeggero === pesiBonus[i]) conteggio++;
+    {
+    }
+  }
+  console.log(conteggio);
+  alert(`i regali leggeri pesano ${somma} in totale e sono ${conteggio} `);
+  console.log(somma);
 }
 if (sceltaPesi === "medio") {
   for (let i = 0; i < pesiBonus.length; i++) {
     if (pesiBonus[i] > 1 && pesiBonus[i] < 12) somma += pesiBonus[i];
   }
-}
-for (let i = 0; i < pesiBonus.length; i++) {
-  let numeroDaCercareMedio = pesiBonus[i];
-  if (numeroDaCercareMedio > 1 && numeroDaCercareMedio < 12) conteggio++;
-}
 
-console.log(conteggio);
-alert(`i regali leggeri pesano ${somma} in totale e sono ${conteggio} `);
-console.log(somma);
+  for (let i = 0; i < pesiBonus.length; i++) {
+    let numeroDaCercareMedio = pesiBonus[i];
+    if (numeroDaCercareMedio > 1 && numeroDaCercareMedio < 12) conteggio++;
+    {
+    }
+  }
+  console.log(conteggio);
+  alert(`i regali leggeri pesano ${somma} in totale e sono ${conteggio} `);
+  console.log(somma);
+}
+if (sceltaPesi === "pesante") {
+  for (let i = 0; i < pesiBonus.length; i++) {
+    if (pesiBonus[i] == 12) {
+      somma += pesiBonus[i];
+    }
+  }
+
+  for (let i = 0; i < pesiBonus.length; i++) {
+    let numeroDaCercarePesante = pesiBonus[i];
+    if (numeroDaCercarePesante == 12) conteggio++;
+    {
+    }
+  }
+  console.log(conteggio);
+  alert(`i regali leggeri pesano ${somma} in totale e sono ${conteggio} `);
+  console.log(somma);
+}

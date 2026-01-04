@@ -3,6 +3,7 @@ console.table(pesiBonus);
 let somma = 0;
 let conteggio = 0;
 let numeroDaCercareLeggero = 1;
+let numeroDaCercarePesante = 12;
 const sceltaPesi = prompt(
   "Scegli il peso dei regali tra: leggero, medio o pesante.",
   "leggero"
@@ -28,6 +29,7 @@ for (let i = 0; i < pesiBonus.length; i++) {
   let numeroDaCercareMedio = pesiBonus[i];
   if (numeroDaCercareMedio > 1 && numeroDaCercareMedio < 12) conteggio++;
 }
+
 console.log(conteggio);
 alert(`i regali leggeri pesano ${somma} in totale e sono ${conteggio} `);
 console.log(somma);
